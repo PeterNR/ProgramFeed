@@ -14,7 +14,7 @@ class MainViewModel : ViewModel() {
         fetchLiveItems()
     }
 
-    fun fetchLiveItems() {
+    private fun fetchLiveItems() {
         viewModelScope.launch {
             _state = _state.copy(isLoading = true)
 
